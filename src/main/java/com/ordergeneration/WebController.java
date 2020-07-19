@@ -19,7 +19,7 @@ public class WebController {
      * @return 200
      * @throws JsonProcessingException request data error
      */
-    @RequestMapping(value = "/generateOrder", method = RequestMethod.GET)
+    @RequestMapping(value = "/generateOrder", method = RequestMethod.PUT)
     public ResponseEntity<?> generateOrder() throws JsonProcessingException {
         generator.generate();
         return new ResponseEntity<>(HttpStatus.OK);
